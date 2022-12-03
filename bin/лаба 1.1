@@ -1,0 +1,22 @@
+
+
+void main() {
+   var rng = Random();
+  var minSign = 101;
+  var minIndex = -1;
+
+   List<int> list10 = List.generate(10, (_) => rng.nextInt(100));
+
+   print(list10);
+  for (var i = 0; i < list10.length; i++) {
+     if (list10[i] < minSign) {
+      minIndex = i;
+      minSign = list10[i];
+    }
+   }
+   minIndex++;
+
+   print("Индекс минимального элемента = $minIndex");
+
+   print("Минимальный элемент массива = $minSign");
+ }
